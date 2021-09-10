@@ -87,6 +87,9 @@ giveATryBtn.addEventListener('click', function () {
             const ind = participant.indexOf(shuffleName[index]);
             thirdWinner.innerHTML = shuffleName[index];
             participant.splice(ind, 1);
+            this.remove();
+            display.classList.remove('display-1')
+            display.innerHTML = `Congratulations! ${firstWinner.innerHTML}, ${secondWinner.innerHTML} and ${thirdWinner.innerHTML}`;
           }
 
         }
